@@ -145,7 +145,8 @@ public class CategoriasController extends HttpServlet {
 		cat.setNombreCat(nombreCat);
 		CategoriaJDBCDAO catDao=new CategoriaJDBCDAO();
 		String msj = catDao.insert(cat);
-		
+		//Este fue el cambio que se hizo
+		System.out.println("este mensaje es solo para cambiar algo");
 		request.getSession().setAttribute("opCategoria", msj);
 		System.out.println(msj);
 		response.sendRedirect("/sistema-comercializadora/categorias");
