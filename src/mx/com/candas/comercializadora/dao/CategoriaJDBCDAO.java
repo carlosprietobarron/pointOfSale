@@ -24,7 +24,8 @@ public class CategoriaJDBCDAO implements iCategoriaDAO{
             String sql = "select * from categorias";
             PreparedStatement ps = base.getConn().prepareCall(sql);
             ResultSet rs = ps.executeQuery();
-            
+            //cambio para probar git
+            System.out.println("otro cambio para probar git")
             while(rs.next()){
                 cat = new Categoria();
                 cat.setCategoriaId(rs.getInt("categoriaid"));
